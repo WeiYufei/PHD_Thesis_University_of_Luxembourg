@@ -12,7 +12,6 @@ from statsmodels.formula.api import ols
 matplotlib.use('TkAgg')
 
 xls = pd.ExcelFile('X://ps-maxuhi.xlsx')
-#xls = pd.ExcelFile('M://Eclipse_Workspace//20191119-log_and_intercept_6-R//ps-maxuhi.xlsx')
 df1 = pd.read_excel(xls,'ps-maxuhi')
 popSize=df1.iloc[0:56,3].tolist()
 maxUHI=df1.iloc[0:56,4].tolist()
