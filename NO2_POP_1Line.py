@@ -124,7 +124,6 @@ legend_elements = [Line2D([0], [0], marker='o',color='k',label='Nguyen & Kim 200
                    Line2D([0], [0], marker='s', color='k', label=esstring, markersize=6,linewidth=0),
                     Line2D([0], [0], color='k', lw=1.5, label=linelegend )]
 ax.legend(handles=legend_elements, loc='best')
-#ax.set_title(titlestring)
  
 plt.xticks(range(3, 8), ['1E3', '1E4', '1E5', '1E6', '1E7'])
 plt.show()
