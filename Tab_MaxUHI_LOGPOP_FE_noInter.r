@@ -16,8 +16,5 @@ model1<-lm(maxUHI~0+logPopSize+cateFac)
 
 
 summary(model1)
-manualR<-1-deviance(model1)/sum(anova(model1)[,2])
-manualR
 
-
-bptest(model1)
+waldtest(model1)
