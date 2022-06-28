@@ -3,7 +3,7 @@ library(lmtest)
 library(openxlsx)
 library(sandwich)
 
-data1 <- read.xlsx("M:/Eclipse_Workspace/Article1_NC_R/Regression_Cell.xlsx", sheet=1)
+data1 <- read.xlsx("M://Regression_Cell.xlsx", sheet=1)
 
 popSize15<-data1$FUA_p_2015
 meanNO2<-data1$grid_code
