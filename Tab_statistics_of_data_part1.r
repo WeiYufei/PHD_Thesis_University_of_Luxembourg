@@ -18,13 +18,6 @@ round(mean(unique(popSizeStat)),1)
 round(sd(unique(popSizeStat)),1)
 round(std(unique(popSizeStat)),1)
 
-print ("Column-Area")
-
-round(min(unique(areaStat)),1)
-round(max(unique(areaStat)),1)
-round(mean(unique(areaStat)),1)
-round(sd(unique(areaStat)),1)
-round(std(unique(areaStat)),1)
 
 print("Column-Annual mean NO2 station")
 
