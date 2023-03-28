@@ -218,11 +218,11 @@ plt.yticks(fontproperties='Helvetica',size=6)
 ax1.xaxis.set_tick_params(width=0.5)
 ax1.yaxis.set_tick_params(width=0.5)
   
-gray_patch = mpatches.Patch(color='silver', alpha=0.4,label='$\pm$ 1 Standard deviation')
-legend_elements = [Line2D([0], [0], marker='o',linestyle='solid', label='Mean rescaled NO$_2$',color='black',markersize=0,linewidth=1.5),
+gray_patch = mpatches.Patch(color='silver', alpha=0.4,label='$\pm$ 1 SD')
+legend_elements = [Line2D([0], [0], marker='o',linestyle='solid', label='Mean of rescaled C',color='black',markersize=0,linewidth=1.5),
                    gray_patch]
     
-ax1.legend(handles=legend_elements, loc='best', fontsize=6)
+ax1.legend(handles=legend_elements, loc='best', fontsize=6,frameon=False)
            
                  
 ax2 = plt.subplot(grid[0,19])#to draw the color legend
