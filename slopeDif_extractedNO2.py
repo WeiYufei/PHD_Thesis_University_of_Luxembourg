@@ -192,7 +192,7 @@ for iia in range(len(eachName)):
 plt.xticks(fontproperties='Helvetica',size=7)
 plt.yticks(fontproperties='Helvetica',size=7)
         
-eestring='Difference of slope (K) (HighestNO$_2$-Real CBD, NO$_2$ without background), \n'+'exclude pixels with a distance of 0 and the min. NO$_2$ of each city'
-ax1.set_xlabel('lgP',fontsize=5)
+eestring='Difference of slope (B) (HighestNO$_2$-Real CBD, NO$_2$ without background), \n'+'exclude pixels with a distance of 0 and the min. NO$_2$ of each city'
+ax1.set_xlabel('log$_{10}$P',fontsize=5)
 ax1.set_ylabel(eestring,fontsize=5)
 plt.show()
