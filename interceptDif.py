@@ -160,7 +160,7 @@ for iia in range(len(eachName)):
 plt.xticks(fontproperties='Helvetica',size=7)
 plt.yticks(fontproperties='Helvetica',size=7)
         
-eestring='Difference of intercept (A) (HighestNO$_2$-Real CBD), \n'+'only exclude pixels with a distance of 0'
+eestring='Difference of intercept (A) (HighestNO$_2$-Real CBD)'
 ax1.set_xlabel('log$_{10}$P',fontsize=5)
 ax1.set_ylabel(eestring,fontsize=5)
 plt.show()
