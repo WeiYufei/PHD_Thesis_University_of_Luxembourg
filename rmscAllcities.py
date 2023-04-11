@@ -209,8 +209,8 @@ def formatnumY(y, pos): #Scientific notation
 formatter2 = FuncFormatter(formatnumY)#Scientific notation
 ax1.yaxis.set_major_formatter(formatter2) 
              
-ax1.set_xlabel('R in km, rescaled by '+str(ScaleDistValue),fontsize=6.5)
-ax1.set_ylabel('C in mol/m$^2$, rescaled by ' +str(ScaleNO2Value),fontsize=6.5) 
+ax1.set_xlabel('R'+"'"+' in km (rescaled by '+str(ScaleDistValue)+')',fontsize=6.5)
+ax1.set_ylabel('C(R'+"'"+') in mol/m$^2$ (rescaled by ' +str(ScaleNO2Value)+')',fontsize=6.5) 
 plt.xticks(fontproperties='Helvetica',size=6)
 plt.yticks(fontproperties='Helvetica',size=6)
 #titleString="Mean of X of 378 FUA at rescaled distance (binned in "+str(binDist)+" km)"
@@ -223,8 +223,9 @@ legend_elements = [Line2D([0], [0], marker='o',linestyle='solid', label='Mean of
                    gray_patch]
     
 ax1.legend(handles=legend_elements, loc='best', fontsize=6,frameon=False)
-           
-                 
+ax1.set_xlim(xmin=0,xmax=240)         
+ax1.set_ylim(ymin=0, ymax=5000)         
+    
 ax2 = plt.subplot(grid[0,19])#to draw the color legend
        
 cmap1 = LinearSegmentedColormap.from_list('', ['yellow','darkorange','red','crimson','darkmagenta','indigo','darkslateblue'],N=100)
