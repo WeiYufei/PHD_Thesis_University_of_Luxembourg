@@ -47,7 +47,7 @@ longPop2015LowerColorBar=longPop2015Lower#to plot the population legend
 
 Pop2015=np.round(dftableCell.iloc[0:104272,15].tolist(),decimals=6)
 FUAId=dftableCell.iloc[0:104272,6].tolist()
-FUAName=dftableCell.iloc[0:104272,19].tolist()
+FUAName=dftableCell.iloc[0:104272,18].tolist()
 NO2AveSatelliteExtracted=np.round(dftableCell.iloc[0:104272,38].tolist(),decimals=6)
 DistinM=np.round(dftableCell.iloc[0:104272,28].tolist(),decimals=6)
 maxNO2Extracted=max(NO2AveSatelliteExtracted)
@@ -154,6 +154,11 @@ for ilz in range(len(indexHead)):
             NO2LessThr.append(forPlotNO2[imas])
               
     ax1.plot(distLessThr,NO2LessThr,linestyle='solid', c=thisColorConfig, linewidth=0.5)  
+    if max(distLessThr)<150:
+        ax1.text(distLessThr[-3],NO2LessThr[-3],FuaNameFullTemp, size=5, color=thisColorConfig)  
+    else:
+        ax1.text(distLessThr[3],NO2LessThr[3],FuaNameFullTemp, size=5, color=thisColorConfig)  
+
      
     for er1 in range(len(distLessThr)):
         TotalRescaledDist.append(distLessThr[er1])
