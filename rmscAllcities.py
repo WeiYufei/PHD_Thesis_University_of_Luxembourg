@@ -60,7 +60,7 @@ for ipath in dirs:
         dftableCell=dftableCell1.sort_values(by=['FUA_p_2015'],ascending=False)
         Pop2015=np.round(dftableCell['FUA_p_2015'].tolist(),decimals=6)
         FUAId=dftableCell['eFUA_ID'].tolist()
-        FUAName=dftableCell['eFUAnamENS'].tolist()
+        FUAName=dftableCell['eFUAnameEN'].tolist()
         NO2AveSatelliteExtracted=np.round(dftableCell['extrGrid'].tolist(),decimals=6)
         DistinM=np.round(dftableCell['CBDPoiRs1k'].tolist(),decimals=6)
 
@@ -151,6 +151,10 @@ for ipath in dirs:
                     NO2LessThr.append(forPlotNO2[imas])
                         
             ax1.plot(distLessThr,NO2LessThr,linestyle='solid', c=thisColorConfig, linewidth=0.5)  
+            if max(distLessThr)<150:
+                ax1.text(distLessThr[-3],NO2LessThr[-3],FuaNameFullTemp, size=5, color=thisColorConfig)  
+            else:
+                ax1.text(distLessThr[13],NO2LessThr[13],FuaNameFullTemp, size=5, color=thisColorConfig) 
             for er1 in range(len(distLessThr)):
                 TotalRescaledDist.append(distLessThr[er1])
                    
